@@ -14,7 +14,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-        targetSdk = 35
     }
 
     buildTypes {
@@ -81,11 +80,6 @@ afterEvaluate {
             }
         }
 
-        repositories {
-            maven {
-                url = uri(layout.buildDirectory.dir("repo").get().asFile.toString())
-            }
-        }
     }
 }
 
