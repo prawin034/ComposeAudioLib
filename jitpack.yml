@@ -1,0 +1,6 @@
+jdk:
+  - openjdk11
+
+install:
+  - ./scripts/prepareJitpackEnvironment.sh
+  - ./gradlew clean build
