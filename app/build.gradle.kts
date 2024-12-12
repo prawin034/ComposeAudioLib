@@ -58,7 +58,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
 
-    implementation("com.github.prawin034:ComposeAudioLib:1.1")
+    //implementation("com.github.prawin034:ComposeAudioLib:1.1")
 
 
 

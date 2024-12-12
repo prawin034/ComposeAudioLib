@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     id("maven-publish")
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
@@ -37,7 +38,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.2" // Replace with the version matching your Compose setup
+        kotlinCompilerExtensionVersion = "2.0.0" // Replace with the version matching your Compose setup
     }
 }
 
