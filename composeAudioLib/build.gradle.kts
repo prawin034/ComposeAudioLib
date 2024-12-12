@@ -27,12 +27,17 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
     buildFeatures {
         compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.2" // Replace with the version matching your Compose setup
     }
 }
 
@@ -68,7 +73,7 @@ afterEvaluate {
 
         repositories {
             maven {
-                url = uri("$buildDir/repo") // Example: Local Maven repository
+                url = uri(layout.buildDirectory.dir("repo").get().asFile.toString())
             }
         }
     }
