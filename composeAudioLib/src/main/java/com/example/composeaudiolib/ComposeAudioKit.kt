@@ -24,6 +24,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.KeyboardArrowRight
@@ -82,7 +85,7 @@ fun ComposeAudioKit(
     modifier: Modifier = Modifier
 ){
 
-    val composeAudioPlayerViewModel : com.example.composeaudiolib.ComposeAudioPlayerViewModel = viewModel()
+    val composeAudioPlayerViewModel : ComposeAudioPlayerViewModel = viewModel()
     val isPlaying  by composeAudioPlayerViewModel.isMediaPlaying.observeAsState()
     val currentPosition by composeAudioPlayerViewModel.currentPositionMedia.observeAsState(0f)
     val mediaDuration by composeAudioPlayerViewModel.mediaDuration.observeAsState(0)
@@ -278,7 +281,7 @@ fun FullScreenComposeAudioKit(
     currentPosition: Float?,
     mediaDuration: Int,
     mediaStartDuration: Int?,
-    composeAudioPlayerViewModel: com.example.composeaudiolib.ComposeAudioPlayerViewModel,
+    composeAudioPlayerViewModel: ComposeAudioPlayerViewModel,
     isPlaying: Boolean?
 ) {
 
@@ -304,7 +307,7 @@ fun FullScreenComposeAudioKit(
                            // ComposeAudioKitRepository.updateFullScreen(false)
                         }
                     ) {
-                        Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "", tint = Color.White)
+                        Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "", tint = Color.White)
                     }
                 }
             )
@@ -396,7 +399,7 @@ fun FullScreenComposeAudioKit(
                     ) {
 
                         Icon(
-                            imageVector = Icons.Default.KeyboardArrowLeft,
+                            imageVector = Icons.AutoMirrored.Filled.KeyboardArrowLeft,
                             contentDescription = "",
                             tint = Color.Black
                         )
@@ -453,7 +456,7 @@ fun FullScreenComposeAudioKit(
                         }
                     ) {
                         Icon(
-                            imageVector = Icons.Default.KeyboardArrowRight,
+                            imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
                             contentDescription = "",
                             tint = Color.Black
                         )

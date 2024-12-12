@@ -18,14 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ComposeAudioLibTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                   ComposeAudioKit(
-                       audio = AudioSource.Raw(1)
-                   )
 
-                }
-            }
         }
     }
 }
