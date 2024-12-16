@@ -11,14 +11,8 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+
 
 rootProject.name = "ComposeAudioLib"
-include(":app")
+//include(":app")
 include(":composeAudioLib")
