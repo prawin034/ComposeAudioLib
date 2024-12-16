@@ -11,7 +11,6 @@ android {
 
     defaultConfig {
         minSdk = 24
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -25,25 +24,27 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
-
     }
 
     kotlinOptions {
         jvmTarget = "11"
     }
+
     buildFeatures {
         compose = true
     }
+
     composeOptions {
-        kotlinCompilerExtensionVersion = "2.0.0" // Replace with the version matching your Compose setup
+        kotlinCompilerExtensionVersion = "2.0.0"
     }
 }
 
-dependencies {
 
+dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -71,15 +72,12 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("maven") {
-                from(components["release"]) // For Android library components
+                from(components["release"])
 
-                // Aligning groupId with Maven conventions
-                groupId = "com.github.prawin034" // Use "io.github" as a common prefix for GitHub users
-                artifactId = "compose-audio-kit" // Matches your library name
+                groupId = "com.github.prawin034"
+                artifactId = "compose-audio-kit"
                 version = "1.0"
             }
         }
-
     }
 }
-

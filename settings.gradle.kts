@@ -14,11 +14,11 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
-        mavenCentral()
+        google() // Required for Android dependencies
+        mavenCentral() // Required for Compose and other libraries
+        maven("https://jitpack.io") // For third-party libraries like Lottie if needed
     }
 }
 
 rootProject.name = "ComposeAudioLib"
-include(":app")
 include(":composeAudioLib")
