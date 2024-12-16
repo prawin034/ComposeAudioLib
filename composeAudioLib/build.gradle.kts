@@ -76,7 +76,7 @@ afterEvaluate {
 
                 // Aligning groupId with Maven conventions
                 groupId = "com.github.prawin034" // Use "io.github" as a common prefix for GitHub users
-                artifactId = "compose-audio-kit" // Matches your library name
+                artifactId = "composeAudioLib" // Matches your library name
                 version = "1.0.0"
             }
         }
