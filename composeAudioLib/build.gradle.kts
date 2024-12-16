@@ -4,7 +4,6 @@ plugins {
     id("maven-publish")
     alias(libs.plugins.kotlin.compose)
 }
-
 android {
     namespace = "com.example.composeaudiolib"
     compileSdk = 35
