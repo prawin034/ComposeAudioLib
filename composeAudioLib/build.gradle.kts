@@ -39,6 +39,8 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "2.0.0" // Replace with the version matching your Compose setup
     }
+
+
 }
 
 dependencies {
@@ -75,7 +77,7 @@ afterEvaluate {
                 // Aligning groupId with Maven conventions
                 groupId = "com.github.prawin034" // Use "io.github" as a common prefix for GitHub users
                 artifactId = "compose-audio-kit" // Matches your library name
-                version = "1.0"
+                version = "1.0.0"
             }
         }
 
